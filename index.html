@@ -2,14 +2,13 @@
     <body>
         <div>
             <input type="text">
-            <button name="scan new card" onClick="alert('test');">Scan New Card4</button>
+            <button name="scan new card" onclick="doAlert()">Scan New Card5</button>
         </div>
+        <script>
+            function doAlert() {
+              alert("hi");
+              Android.scanCard("_id");
+            }
+         </script>
     </body>
 </html>
-<script>
-(function() {
-    function onClickButton() {
-        alert();
-    }
-})
-</script>
