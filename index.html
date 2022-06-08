@@ -1,14 +1,19 @@
 <html>
-    <body>
-        <div>
-            <input type="text">
-            <button name="scan new card" onclick="doAlert()">Scan New Card6</button>
-        </div>
-        <script>
-            function doAlert() {
-              alert("hi");
-              scanCard.performClick("_id");
-            }
-         </script>
-    </body>
+<body>
+
+<input type="text" id="pan" placeholder="Card Number">
+<input type="text" id="expiry" placeholder="Expiry date">
+<input type="button" value="Scan New Card" onClick="showAndroidToast('Hello Android!')" />
+
+<script type="text/javascript">
+    function showAndroidToast(toast) {
+        Android.performScan(toast);
+    }
+
+    function setCardNumber(pan,expiry){
+        document.getElementById("pan").value = pan;
+        document.getElementById("expiry").value = expiry;
+    }
+</script>
+</body>
 </html>
